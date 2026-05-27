@@ -1,0 +1,21 @@
+-- Add missing columns to the users table in Supabase
+-- Run this in Supabase Dashboard → SQL Editor
+
+ALTER TABLE "users" ADD COLUMN IF NOT EXISTS "firstName" TEXT;
+ALTER TABLE "users" ADD COLUMN IF NOT EXISTS "lastName" TEXT;
+ALTER TABLE "users" ADD COLUMN IF NOT EXISTS "avatar" TEXT;
+ALTER TABLE "users" ADD COLUMN IF NOT EXISTS "bio" TEXT;
+ALTER TABLE "users" ADD COLUMN IF NOT EXISTS "currentGoal" TEXT;
+ALTER TABLE "users" ADD COLUMN IF NOT EXISTS "skills" TEXT;
+ALTER TABLE "users" ADD COLUMN IF NOT EXISTS "interests" TEXT;
+ALTER TABLE "users" ADD COLUMN IF NOT EXISTS "preferences" TEXT;
+ALTER TABLE "users" ADD COLUMN IF NOT EXISTS "avatarConfig" TEXT;
+ALTER TABLE "users" ADD COLUMN IF NOT EXISTS "subscriptionTier" TEXT DEFAULT 'free';
+ALTER TABLE "users" ADD COLUMN IF NOT EXISTS "subscriptionStatus" TEXT DEFAULT 'active';
+ALTER TABLE "users" ADD COLUMN IF NOT EXISTS "subscriptionStarted" TIMESTAMP;
+ALTER TABLE "users" ADD COLUMN IF NOT EXISTS "subscriptionExpires" TIMESTAMP;
+ALTER TABLE "users" ADD COLUMN IF NOT EXISTS "paymentProvider" TEXT;
+ALTER TABLE "users" ADD COLUMN IF NOT EXISTS "customerId" TEXT;
+ALTER TABLE "users" ADD COLUMN IF NOT EXISTS "subscriptionId" TEXT;
+ALTER TABLE "users" ADD COLUMN IF NOT EXISTS "createdAt" TIMESTAMP DEFAULT NOW();
+ALTER TABLE "users" ADD COLUMN IF NOT EXISTS "updatedAt" TIMESTAMP DEFAULT NOW();
