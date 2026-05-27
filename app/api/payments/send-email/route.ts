@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { Resend } from 'resend'
 
-const resend = new Resend(process.env.RESEND_API_KEY)
+const resend = new Resend(process.env.RESEND_API_KEY || 're_dummy_key_for_build')
 
 // On Resend free plan, emails are delivered to your verified Resend email.
 // To send to ANY email, add a custom domain at resend.com/domains.
